@@ -24,6 +24,6 @@ module lif(
 		end
 	end
 
-	assign next_state = current + (beta >> 1);
+	assign next_state = current + (state >> 1);
 	assign spike = timer == 0 && state >= threshold;
 endmodule
