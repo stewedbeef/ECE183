@@ -7,7 +7,8 @@ module lif(
 
 	localparam timer_delay = 4'd15;
 
-	reg [7:0] next_state, threshold;
+	reg [7:0] threshold;
+	wire [7:0] next_state;
 	reg [3:0] timer = 0;
 	always @(posedge clk) begin
 		if (!rst_n) begin
